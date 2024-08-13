@@ -31,7 +31,7 @@ const Hero = ({ apiEndpoint }) => {
       <div className="hero-content container">
         <h1>{movie.title}</h1>
         <p>{movie.overview}</p>
-        <Link to={`/movie-details/${movie.id}`}>Watch Now</Link>
+        <Link className='btn' to={`/movie-details/${movie.id}`}>Watch Now</Link>
       </div>
     </section>
   );

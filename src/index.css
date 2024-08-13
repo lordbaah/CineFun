@@ -55,6 +55,12 @@ p{
   max-width: 70ch;
 }
 
+.btn{
+  padding: 1em 1.2em;
+  background: var(--pink-color);
+  font-weight: 700;
+}
+
 .section{
   margin-top: 3rem;
 }
@@ -101,7 +107,7 @@ p{
   .container {
     max-width: 1024px;
   }
-  
+
   h1{
     font-size: 3rem;
   }
