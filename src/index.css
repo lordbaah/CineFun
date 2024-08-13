@@ -26,6 +26,7 @@ body{
 
 a{
   text-decoration: none;
+  display: inline-block;
 }
 
 img,
@@ -47,17 +48,38 @@ h2{
   text-transform: uppercase;
 }
 
+h2{
+  position: relative;
+  width: max-content;
+}
+
+h2::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--pink-color);
+  width: 100%;
+}
+
+.details-h2{
+  margin-bottom: 1rem;
+}
+
 h1{
   font-size: 2rem;
 }
 
 p{
   max-width: 70ch;
+  font-weight: 500;
 }
 
 .btn{
-  padding: 1em 1.2em;
+  padding: 0.8em 1em;
   background: var(--pink-color);
+  color: var(--text-color);
   font-weight: 700;
 }
 

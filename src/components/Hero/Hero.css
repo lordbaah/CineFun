@@ -19,3 +19,9 @@
     mask-image: linear-gradient(to right, transparent, black 75%);
     -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
 }
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
