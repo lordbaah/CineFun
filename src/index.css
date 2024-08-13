@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --body-bg-clr: #1b1b1b;
+  --text-color: #ffffff;
+  --pink-color: #ff4c4c;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: var(--body-bg-clr);
+  color: var(--text-color);
+  font-family: "Urbanist", sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+img,
+.LazyLoadImage
+{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+li{
+  list-style: none;
+}
+
+h1,
+h2{
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1{
+  font-size: 2rem;
+}
+
+p{
+  max-width: 70ch;
+}
+
+.section{
+  margin-top: 3rem;
+}
+
+.home-section{
+  margin-top: 3rem;
+}
+
+.container{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  
+  h1{
+    font-size: 3rem;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+
+/* custom scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--body-bg-clr);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--pink-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--pink-color)
+                     var(--body-bg-clr);
+  }
+}

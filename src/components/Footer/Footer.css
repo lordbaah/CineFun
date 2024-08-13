@@ -1,0 +1,9 @@
+footer{
+    margin-top: 1rem;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

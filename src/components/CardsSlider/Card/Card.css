@@ -1,0 +1,13 @@
+.card {
+    color: inherit;
+}
+  
+.card-img-wrap {
+    width: 100%;
+    height: auto;
+}
+  
+.card-description {
+    /* margin-top: 10px; */
+    text-align: center;
+}

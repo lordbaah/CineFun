@@ -1,0 +1,24 @@
+.nav-logo{
+    color: var(--text-color);
+}
+
+.nav-logo span{
+    color: var(--pink-color);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.nav-items{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link{
+    color: var(--text-color);
+}

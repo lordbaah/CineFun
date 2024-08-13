@@ -1,0 +1,21 @@
+.hero-section{
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-img-wrapper{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.hero-img{
+    height: 100%;
+    mask-image: linear-gradient(to right, transparent, black 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+}

@@ -1,0 +1,32 @@
+.card-slider-section{
+    overflow: hidden;
+}
+
+.card-slider-section {
+    /* padding: 20px; */
+}
+
+.card_slide_container {
+    margin: 0 -10px;
+}
+
+.slick-slide {
+    padding: 0 10px;
+}
+
+.slider-section-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.slider-arrows{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.slick-next, .slick-prev{
+    visibility: hidden;
+}
