@@ -168,7 +168,6 @@ body::-webkit-scrollbar-thumb {
 
 @supports not selector(::-webkit-scrollbar) {
   body {
-    scrollbar-color: var(--pink-color)
-                     var(--body-bg-clr);
+    scrollbar-color: var(--pink-color)   var(--body-bg-clr);
   }
 }
