@@ -21,6 +21,8 @@ export const fetchMovies = async (apiEndpoint) => {
     
     // Parse the JSON response
     const data = await response.json();
+    // const text = await response.text();
+    // console.log(text);
     
     // Return the array of movies from the 'results' property
     return data.results || [];

@@ -12,6 +12,8 @@ import Anime_Page from './pages/Anime/Anime';
 import TvShowDetails from './pages/TvShows/TvShowDetails';
 
 const App = () => {
+  console.log('API Key:', import.meta.env.VITE_TMDB_API_KEY); // Log to verify the key is present
+  
   return (
     <Router>
       <div className="App">
