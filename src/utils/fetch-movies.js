@@ -1,3 +1,9 @@
+const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
+
+// console.log("API Key:", apiKey);
+// console.log("API URL:", apiUrl);
+
 // Function to fetch movies from the API
 export const fetchMovies = async (apiEndpoint) => {
   // API request configuration
@@ -5,7 +11,7 @@ export const fetchMovies = async (apiEndpoint) => {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDhhNjg0Yzc1MzBiMTM5MTExZTQ2NWVlNTUyYzI0OCIsIm5iZiI6MTcyMjU4NjMwMi44MDk1NzEsInN1YiI6IjY2NmU5ZGVlMjY2OTUxNjQ1NDhjOTUwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xRVzCdKOSqGTWoSGCmfOhFYecepGAFwezi32TMYzoeg'
+      Authorization: `Bearer ${apiKey}`
     }
   };
 
@@ -34,12 +40,12 @@ export const fetchMoviesWithPagination = async (page = 1) => {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDhhNjg0Yzc1MzBiMTM5MTExZTQ2NWVlNTUyYzI0OCIsIm5iZiI6MTcyMzQ5MTA2OC4xMjAzOTUsInN1YiI6IjY2NmU5ZGVlMjY2OTUxNjQ1NDhjOTUwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AsZC6AOOOqFVAxQTnv2dUQerJ3zBexMU-xZ2g8TZebk'
+      Authorization: `Bearer ${apiKey}`
     }
   };
 
   try {
-    const response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${page}`, options);
+    const response = await fetch(`${apiUrl}/movie/now_playing?language=en-US&page=${page}`, options);
     const data = await response.json();
     return data;
   } catch (err) {

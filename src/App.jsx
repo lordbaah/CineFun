@@ -1,6 +1,6 @@
 import React from 'react';
-import './index.css';
 import './modern-normalize.css'
+import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';

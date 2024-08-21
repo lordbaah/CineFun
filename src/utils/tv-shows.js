@@ -1,14 +1,17 @@
+const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export const fetchTvShowsWithPagination = async (page = 1) => {
     const options = {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDhhNjg0Yzc1MzBiMTM5MTExZTQ2NWVlNTUyYzI0OCIsIm5iZiI6MTcyMzQ5MTA2OC4xMjAzOTUsInN1YiI6IjY2NmU5ZGVlMjY2OTUxNjQ1NDhjOTUwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AsZC6AOOOqFVAxQTnv2dUQerJ3zBexMU-xZ2g8TZebk'
+        Authorization: `Bearer ${apiKey}`
       }
     };
   
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/tv/popular?language=en-US&page=${page}`, options);
+      const response = await fetch(`${apiUrl}/tv/popular?language=en-US&page=${page}`, options);
       const data = await response.json();
       return data;
     } catch (err) {

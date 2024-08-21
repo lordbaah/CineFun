@@ -1,11 +1,12 @@
-const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDhhNjg0Yzc1MzBiMTM5MTExZTQ2NWVlNTUyYzI0OCIsIm5iZiI6MTcyMjU4NjMwMi44MDk1NzEsInN1YiI6IjY2NmU5ZGVlMjY2OTUxNjQ1NDhjOTUwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xRVzCdKOSqGTWoSGCmfOhFYecepGAFwezi32TMYzoeg';
+const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const fetchMovieDetails = async (endpoint) => {
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${API_KEY}`
+      Authorization: `Bearer ${apiKey}`
     }
   };
 
@@ -22,7 +23,7 @@ const fetchMovieDetails = async (endpoint) => {
   }
 };
 
-export const fetchMovieDetailsById = (id) => fetchMovieDetails(`https://api.themoviedb.org/3/movie/${id}`);
-export const fetchMovieVideos = (id) => fetchMovieDetails(`https://api.themoviedb.org/3/movie/${id}/videos`);
-export const fetchRelatedMovies = (id) => fetchMovieDetails(`https://api.themoviedb.org/3/movie/${id}/recommendations`);
-export const fetchMovieCredits = (id) => fetchMovieDetails(`https://api.themoviedb.org/3/movie/${id}/credits`);
+export const fetchMovieDetailsById = (id) => fetchMovieDetails(`${apiUrl}/movie/${id}`);
+export const fetchMovieVideos = (id) => fetchMovieDetails(`${apiUrl}/movie/${id}/videos`);
+export const fetchRelatedMovies = (id) => fetchMovieDetails(`${apiUrl}/movie/${id}/recommendations`);
+export const fetchMovieCredits = (id) => fetchMovieDetails(`${apiUrl}/movie/${id}/credits`);

@@ -1,11 +1,12 @@
-const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDhhNjg0Yzc1MzBiMTM5MTExZTQ2NWVlNTUyYzI0OCIsIm5iZiI6MTcyMjU4NjMwMi44MDk1NzEsInN1YiI6IjY2NmU5ZGVlMjY2OTUxNjQ1NDhjOTUwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xRVzCdKOSqGTWoSGCmfOhFYecepGAFwezi32TMYzoeg';
+const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const fetchTvShowDetails = async (endpoint) => {
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${API_KEY}`
+      Authorization: `Bearer ${apiKey}`
     }
   };
 
@@ -22,8 +23,8 @@ const fetchTvShowDetails = async (endpoint) => {
   }
 };
 
-export const fetchTvShowDetailsById = (id) => fetchTvShowDetails(`https://api.themoviedb.org/3/tv/${id}`);
-export const fetchTvShowVideos = (id) => fetchTvShowDetails(`https://api.themoviedb.org/3/tv/${id}/videos`);
-export const fetchTvShowEpisodes = (id, seasonNumber) => fetchTvShowDetails(`https://api.themoviedb.org/3/tv/${id}/season/${seasonNumber}`);
-export const fetchRelatedTvShows = (id) => fetchTvShowDetails(`https://api.themoviedb.org/3/tv/${id}/recommendations`);
-export const fetchTvShowCredits = (id) => fetchTvShowDetails(`https://api.themoviedb.org/3/tv/${id}/credits`);
+export const fetchTvShowDetailsById = (id) => fetchTvShowDetails(`${apiUrl}/tv/${id}`);
+export const fetchTvShowVideos = (id) => fetchTvShowDetails(`${apiUrl}/tv/${id}/videos`);
+export const fetchTvShowEpisodes = (id, seasonNumber) => fetchTvShowDetails(`${apiUrl}/tv/${id}/season/${seasonNumber}`);
+export const fetchRelatedTvShows = (id) => fetchTvShowDetails(`${apiUrl}/tv/${id}/recommendations`);
+export const fetchTvShowCredits = (id) => fetchTvShowDetails(`${apiUrl}/tv/${id}/credits`);
